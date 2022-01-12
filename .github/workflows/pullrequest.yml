@@ -2,7 +2,7 @@ name: PullRequestAction
 
 on:
   pull_request_target:
-    branches: [ master ]
+    branches: [main]
 
 jobs:
   process-pull-request:
@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Cancel previous runs
         uses: n1hility/cancel-previous-runs@v2
-        with: 
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch git repository

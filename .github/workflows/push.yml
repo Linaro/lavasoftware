@@ -2,7 +2,7 @@ name: PushAction
 
 on:
   push:
-    branches: [ master ]
+    branches: [main]
   workflow_dispatch:
 
 jobs:
@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: Cancel previous runs
         uses: n1hility/cancel-previous-runs@v2
-        with: 
+        with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Fetch git repository
