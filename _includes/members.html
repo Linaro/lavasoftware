@@ -1,0 +1,9 @@
+<div class="row py-2">
+    {% for member in site.data.members.items %}
+        <div class="col col-4 col-sm-2 text-center py-4">
+            <a href="{{member.url}}">
+                {% picture member_img {{member.image.path}} --alt {{member.image.alt}} %}
+            </a>
+        </div>
+    {% endfor %}
+</div>

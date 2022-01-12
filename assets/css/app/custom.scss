@@ -1,0 +1,96 @@
+#wrapper {
+  .latest-featured-post picture .post_index_header_image {
+    max-height: 400px;
+  }
+  .blog-post-item-col {
+    a {
+      color: black;
+      &:hover {
+        text-decoration: none;
+        color: black;
+      }
+    }
+    .rounded-circle:hover {
+      transform: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+      -moz-box-shadow: none;
+    }
+  }
+  footer {
+    .footer-main {
+      background: #dc4a4a !important;
+    }
+    .footer-bottom {
+      a {
+        color: #fff;
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+  div#main_content {
+    background-color: #fbfbfb;
+    border: 1px solid #e9e9e9;
+  }
+  #jumbotron {
+    &:before {
+      opacity: 0.7;
+      height: 100%;
+    }
+    &.background-image {
+      background-repeat: repeat !important;
+      background-size: auto !important;
+    }
+  }
+  h3.panel-title.text-center {
+    color: white;
+  }
+}
+.navbar-brand svg {
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  left: -30px;
+  position: relative;
+}
+@media (max-width: 1000px) {
+  #flow_wrapper .row:first-child {
+    padding-top: 30px;
+  }
+}
+
+.openamp_bg {
+  background-image: url("/assets/images/content/triangle_background.svg");
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.member_img {
+  height: 100px;
+  width: 100%;
+  object-fit: contain;
+}
+.overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom right, #000, #000);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.expandable_jumbotron {
+  height: auto !important;
+}
+.inner_content_wrapper {
+  z-index: 1 !important;
+  position: relative;
+}

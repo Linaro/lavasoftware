@@ -1,0 +1,25 @@
+div#jumbotron {
+    height: 540px;
+    img.center-block.img-responsive {
+        height: 430px;
+        margin-bottom: -100px;
+        margin-top: -70px;
+        @media(max-width: 450px){
+            height: 430px;
+            margin-bottom: -135px;
+            margin-top: -100px;
+            transform: scale(1.5);
+        }
+    }
+    p.center-block.text-white {
+        font-size: 16px;
+        margin-top: 15px;
+        @media(max-width: 400px){
+            font-size: 16px;
+            margin-top: 0px;
+        }
+    }
+}
+div#main_content .container p {
+    text-align: center;
+}

@@ -1,0 +1,16 @@
+search:
+  enabled: false
+  label: LAVASoftware
+universal_nav: false
+brand:
+  text: LAVA Software
+  alt: LAVA Software
+  path: /assets/images/content/lavasoftware-logo.png
+  url: /
+pages:
+  - title: ドキュメンテーション
+    url: /documentation/
+  - title: プレゼンテーション
+    url: /presentations/
+  - title: 接触
+    url: /contact/

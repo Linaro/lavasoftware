@@ -1,0 +1,6 @@
+AWS_STATIC_SITE_PROFILE=openampproject-org-buildbot
+AWS_STATIC_SITE_URL=production-openampproject-org
+CF_DIST_ID_STATIC_LO=E11W1PGAWEYKDT
+CLOUDFRONT_ADD_SECURITY_HEADERS_ARN=arn:aws:lambda:us-east-1:877313111360:function:cloudfront-add-security-headers:2
+JEKYLL_ENV=production
+SITE_URL=production.openampproject.org

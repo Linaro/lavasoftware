@@ -1,0 +1,10 @@
+.asset-cache
+.sass-cache
+.jekyll-metadata
+_site
+production.lavasoftware.org
+Gemfile.lock
+assets/resized
+.jekyll-cache
+.asset_pipeline
+generated
