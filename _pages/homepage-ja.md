@@ -40,5 +40,5 @@ flow:
 
             ### ソースコード
 
-            LAVA ソースコードは [lavasoftware GitLab](https://git.lavasoftware.org/lava) でホストされています
+            LAVA ソースコードは [lavasoftware GitLab](https://gitlab.com/lava) でホストされています
 ---

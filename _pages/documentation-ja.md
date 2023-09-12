@@ -21,7 +21,7 @@ flow:
             ### 組み込みドキュメント
 
             LAVA の各インスタンスには、ドキュメントが組み込まれています。
-            ドキュメントは[デモ LAVA インスタンス](https://master.lavasoftware.org/static/docs/v2/index.html)で読むことができます。
+            ドキュメントは[デモ LAVA インスタンス](https://docs.lavasoftware.org/lava/index.html)で読むことができます。
 
             ### 進行中の作業
 

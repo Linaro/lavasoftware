@@ -20,7 +20,7 @@ flow:
             ### Embedded documentation
 
             Each instance of LAVA comes with the documentation embedded.
-            You can read the documentation in the [demo LAVA instance](https://master.lavasoftware.org/static/docs/v2/index.html).
+            You can read the documentation in the [demo LAVA instance](https://docs.lavasoftware.org/lava/index.html).
 
             ### Work in progress
 
