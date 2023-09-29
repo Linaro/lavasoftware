@@ -42,5 +42,5 @@ flow:
 
             ### Source code
 
-            The LAVA source code is hosted on [lavasoftware GitLab](https://git.lavasoftware.org/lava)
+            The LAVA source code is hosted on [lavasoftware GitLab](https://gitlab.com/lava)
 ---
