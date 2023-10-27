@@ -4,30 +4,32 @@ import GoogleAnalytics from "./GoogleAnalytics.astro";
 import { SEO } from "astro-seo";
 import "@fontsource/lato";
 import "../../styles/global.scss";
-const { GA_ID } = import.meta.env;
+const GA_ID = import.meta.env.GA_ID;
 
 const {
-  title = "The OpenAMP Project",
-  description = "OpenAMP (Open Asymmetric Multi-Processing) seeks to standardize the interactions between operating environments in a heterogeneous embedded system through open source solutions for Asymmetric MultiProcessing (AMP).",
+  title = "Linaro Automated Validation Architecture",
+  description = "Linaro Automated Validation Architecture (LAVA) is a continuous integration system for deploying operating systems onto physical and virtual hardware for running tests.",
   type = "website",
 } = Astro.props;
+
+const appended_title = title + " | LAVA Software";
 ---
 
 <head>
-  <title>{title}</title>
+  <title>{appended_title}</title>
   <meta property="description" content={description} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <Cookies />
   <GoogleAnalytics id={GA_ID} />
   <SEO
-    title={title}
+    title={appended_title}
     description={description}
     openGraph={{
       basic: {
-        title: title,
+        title: appended_title,
         type: type,
-        image: "https://www.openampproject.org/images/social-media-image.png",
+        image: "https://www.lavasoftware.org/images/social-media-image.png",
       },
     }}
     twitter={{
@@ -44,10 +46,9 @@ const {
       meta: [
         {
           name: "twitter:image",
-          content:
-            "https://www.openampproject.org/images/openAMP_share_image.png",
+          content: "https://www.lavasoftware.org/images/social-media-image.png",
         },
-        { name: "twitter:title", content: title },
+        { name: "twitter:title", content: appended_title },
         { name: "twitter:description", content: description },
       ],
     }}

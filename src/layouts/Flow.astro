@@ -16,7 +16,7 @@ const {
 } = Astro.props!;
 const page = await getEntryBySlug("pages", slug)
 
-const { title, description, flow, hero, image } = page.data
+const { title, description, flow, hero } = page.data
 
 const allComponents = await import.meta.glob("../components/**/*.astro")
 const rowComponents = {} as Record<string, {default: AstroComponentFactory} >;
@@ -44,13 +44,12 @@ for (const sectionData of await getEntries(flow.map((row) => row.sections!.map((
         flow?.map((row: any) => {
           const { row: component, sections, ...rowProps } = row
           const RowComp = rowComponents[component.slug].default;
-          console.log
+
           return RowComp ? (
             <RowComp {...rowProps}>
               {sections ? sections.map((section: any) => {
                 const {component, ...sectionProps} = section
                 const SectionComp = sectionComponents[component.slug].default
-                console.log(SectionComp)
                 return SectionComp ? <SectionComp {...sectionProps} ><slot /></SectionComp> : <div>Not implemented</div>
               }) : <></>}
             </RowComp>

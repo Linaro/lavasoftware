@@ -6,7 +6,6 @@ const pages = defineCollection({
     z.object({
       title: z.string(),
       description: z.string(),
-      image: image(),
       hero: z
         .object({
           title: z.string(),
@@ -22,16 +21,18 @@ const pages = defineCollection({
         .optional(),
       flow: z
         .array(
-          z.object({
-            row: reference("rows"),
-            sections: z.array(
-              z
-                .object({
-                  component: reference("sections"),
-                })
-                .catchall(z.any())
-            ),
-          })
+          z
+            .object({
+              row: reference("rows"),
+              sections: z.array(
+                z
+                  .object({
+                    component: reference("sections"),
+                  })
+                  .catchall(z.any())
+              ),
+            })
+            .catchall(z.any())
         )
         .optional(),
     }),

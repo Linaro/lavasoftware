@@ -5,8 +5,12 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://www.lavasoftware.org/",
   output: "static",
-  integrations: [tailwind({
-    applyBaseStyles: false
-  }), sitemap()]
+  integrations: [
+    tailwind({
+      applyBaseStyles: false,
+    }),
+    sitemap(),
+  ],
 });

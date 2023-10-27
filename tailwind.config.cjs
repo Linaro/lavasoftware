@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       colors: {
         accent: "rgb(152, 204, 51)",
+        accentbg: "#e4f1ca",
         linarogreen: "rgb(152, 204, 51)",
       },
       typography: (theme) => ({
