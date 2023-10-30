@@ -1,0 +1,5 @@
+AWS_STATIC_SITE_PROFILE=lavasoftware-org-buildbot
+AWS_STATIC_SITE_URL=production-lavasoftware-org
+CF_DIST_ID_STATIC_LO=E14GCOTNAMZZ77
+CLOUDFRONT_ADD_SECURITY_HEADERS_ARN=arn:aws:lambda:us-east-1:439615145596:function:cloudfront-add-security-headers:1
+SITE_URL=www.lavasoftware.org
