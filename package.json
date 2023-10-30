@@ -29,6 +29,6 @@
   },
   "devDependencies": {
     "postcss": "^8.4.31",
-    "sass": "^1.69.4"
+    "sass": "^1.69.5"
   }
 }
