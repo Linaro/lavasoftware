@@ -8,7 +8,7 @@ description: >-
   LAVA is also used to managed and share boards among teams.
 hero:
   title: Linaro Automated Validation Architecture
-  background_image: "../../assets/images/content/Lava_banner.png"
+  background_image: "../../assets/images/content/lava_image.jpg"
   style: font-bold
 flow:
   - row: container_row

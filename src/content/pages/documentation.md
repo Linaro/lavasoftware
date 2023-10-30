@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/Flow.astro
-slug: "/documentation/"
+slug: documentation/
 title: Documentation
 description: >
   LAVA Software documentation information
 hero:
   title: Presentations
-  background_image: "../../assets/images/content/Lava_banner.png"
+  background_image: "../../assets/images/content/lava_image.jpg"
   style: font-bold
 flow:
   - row: container_row

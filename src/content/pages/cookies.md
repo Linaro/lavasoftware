@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/Flow.astro
-slug: "/cookies/"
+slug: cookies/
 title: Cookies
 description: >
   LAVA Software cookies information
 hero:
   title: Cookies
-  background_image: "../../assets/images/content/Lava_banner.png"
+  background_image: "../../assets/images/content/lava_image.jpg"
   style: font-bold
 flow:
   - row: container_row
