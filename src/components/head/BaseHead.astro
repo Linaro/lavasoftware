@@ -13,31 +13,39 @@ const {
 } = Astro.props;
 
 const appended_title = title + " | LAVA Software";
+
+const social_image =
+  "https://www.lavasoftware.org/images/social-media-image.png";
 ---
 
 <head>
-  <title>{appended_title}</title>
+  <title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <meta property="description" content={description} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <Cookies />
   <GoogleAnalytics id={GA_ID} />
   <SEO
-    title={appended_title}
+    title={title}
     description={description}
     openGraph={{
       basic: {
-        title: appended_title,
+        title: title,
         type: type,
-        image: "https://www.lavasoftware.org/images/social-media-image.png",
+        image: social_image,
       },
     }}
+    ,
     twitter={{
+      title: title,
+      description: description.slice(0, 196) + "...",
+      card: "summary_large_image",
+      image: social_image,
       creator: "@LinaroOrg",
     }}
     extend={{
       link: [
-        { rel: "icon", href: "/favicon.png" },
         {
           rel: "me",
           href: "https://mastodon.org.uk/@LinaroLtd@mastodon.social",
@@ -45,11 +53,17 @@ const appended_title = title + " | LAVA Software";
       ],
       meta: [
         {
-          name: "twitter:image",
-          content: "https://www.lavasoftware.org/images/social-media-image.png",
+          property: "twitter:image",
+          content: social_image,
         },
-        { name: "twitter:title", content: appended_title },
-        { name: "twitter:description", content: description },
+        {
+          property: "og:image",
+          content: social_image,
+        },
+        {
+          property: "og:description",
+          content: description,
+        },
       ],
     }}
   />
