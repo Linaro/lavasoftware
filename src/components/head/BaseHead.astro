@@ -19,26 +19,26 @@ const social_image =
 ---
 
 <head>
-  <title>{title}</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <title>{appended_title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
   <meta property="description" content={description} />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta charset="utf-8" />
   <Cookies />
   <GoogleAnalytics id={GA_ID} />
   <SEO
-    title={title}
+    title={appended_title}
     description={description}
     openGraph={{
       basic: {
-        title: title,
+        title: appended_title,
         type: type,
         image: social_image,
       },
     }}
     ,
     twitter={{
-      title: title,
+      title: appended_title,
       description: description.slice(0, 196) + "...",
       card: "summary_large_image",
       image: social_image,
