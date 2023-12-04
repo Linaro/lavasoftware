@@ -28,7 +28,7 @@
     "vanilla-cookieconsent": "^2.9.2"
   },
   "devDependencies": {
-    "postcss": "^8.4.31",
+    "postcss": "^8.4.32",
     "sass": "^1.69.4"
   }
 }
