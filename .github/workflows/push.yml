@@ -22,6 +22,21 @@ jobs:
       - name: Initialise environment
         run: cat "$GITHUB_WORKSPACE/website/.github-env-${GITHUB_REF##*/}" >> $GITHUB_ENV
 
+      - name: set branch env
+        run: echo "BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+      - name: security.txt
+        # If running on main branch, add signed security.txt file to repo before building
+        if: env.BRANCH == 'main'
+        run: |
+          cd "$GITHUB_WORKSPACE/website"
+          /srv/github-action-scripts/sign-security.sh
+          if [ -f "security.txt.asc" ]; then
+            mkdir "public/.well-known"
+            mv security.txt.asc "public/.well-known/security.txt"
+          else
+            echo "No security.txt.asc produced"
+          fi
+
       - name: Build site
         run: cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
 
