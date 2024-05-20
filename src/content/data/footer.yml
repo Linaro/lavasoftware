@@ -2,7 +2,7 @@
 copyright_text: Linaro Limited
 # Set this to false if you do not want the Linaro logo in the footer.
 footer_brand:
-  path: /assets/images/content/linaro-logo.png
+  path: /assets/images/content/Linaro-logo-white.png
   alt: Linaro Ltd
   url: https://www.linaro.org
 # Social Media Icons Row
