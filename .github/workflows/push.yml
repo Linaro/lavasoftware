@@ -15,7 +15,7 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Fetch git repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4.1.6
         with:
           path: website
 
@@ -24,6 +24,7 @@ jobs:
 
       - name: set branch env
         run: echo "BRANCH=${{ github.ref_name }}" >> $GITHUB_ENV
+
       - name: security.txt
         # If running on main branch, add signed security.txt file to repo before building
         if: env.BRANCH == 'main'
@@ -38,7 +39,10 @@ jobs:
           fi
 
       - name: Build site
-        run: cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
+        run: |
+          source ~/.nvm/nvm.sh
+          nvm use 20
+          cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
 
       - name: Check links
         run: /srv/github-action-scripts/check-links.sh ${{ github.workspace }}/website/dist
