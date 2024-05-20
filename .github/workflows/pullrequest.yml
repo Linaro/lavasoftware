@@ -33,7 +33,9 @@ jobs:
           path: website
 
       - name: Build site
-        run: cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
+        run: |
+          nvm use 18
+          cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
         env:
           TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
