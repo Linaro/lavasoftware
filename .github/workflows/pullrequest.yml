@@ -34,6 +34,7 @@ jobs:
 
       - name: Build site
         run: |
+          source ~/.nvm/nvm.sh
           nvm use 18
           cd ${{ github.workspace }}/website && /srv/github-action-scripts/build-astro-site.sh
         env:
