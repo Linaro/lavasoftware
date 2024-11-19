@@ -1,2 +1,3 @@
 Contact: mailto:psirt@linaro.org
 Canonical: https://www.lavasoftare.org/.well-known/security.txt
+Policy: https://www.linaro.org/vdp
